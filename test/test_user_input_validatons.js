@@ -13,7 +13,7 @@ describe('User Validations', function () {
     });
   });
   describe('Email is Valid', function () {
-    xit('should not be blank', function (done) {
+    it('should not be blank', function (done) {
       validate.emailIsValid.should.be.a('function');
       assert.equal(validate.emailIsValid('    '), 'Email is invalid')
       assert.equal(validate.emailIsValid('me@me.com'), '')
