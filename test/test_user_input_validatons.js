@@ -21,7 +21,7 @@ describe('User Validations', function () {
     });
   });
   describe('Phone Number is Valid', function () {
-    xit('should not be blank', function (done) {
+    it('should not be blank', function (done) {
       validate.phoneIsValid.should.be.a('function');
       assert.equal(validate.phoneIsValid('  '), 'Phone number is invalid');
       done();
