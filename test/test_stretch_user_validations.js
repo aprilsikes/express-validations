@@ -19,7 +19,7 @@ describe('User Validations', function () {
       assert.equal(validate.emailIsValid('me@me.com'), '')
       done();
     });
-    xit('should not be just @ symbol', function (done) {
+    it('should not be just @ symbol', function (done) {
       assert.equal(validate.emailIsValid('@'), 'Email is invalid')
       assert.equal(validate.emailIsValid('me@me.it'), '')
       done();

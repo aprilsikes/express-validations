@@ -11,7 +11,6 @@ router.post('/', function (req, res, next) {
   errors.push(validate.nameIsNotBlank(req.body.name));
   errors.push(validate.emailIsValid(req.body.email));
   errors.push(validate.phoneIsValid(req.body.phone));
-  console.log(errors);
   errors = errors.filter(function (error) {
     if (errors.length) {
       return errors.length;
@@ -20,7 +19,9 @@ router.post('/', function (req, res, next) {
     else {
       res.send('You are so valid');
     }
-  })
-})
+  });
+});
+
+
 
 module.exports = router;
